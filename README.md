@@ -204,6 +204,8 @@ The project can be further enhanced with:
 👤 Multiple player profiles
 🗄️ Database integration
 🎨 Improved visual design
+
+
 👥 Team
 Team Members
 Name
