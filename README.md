@@ -1,197 +1,221 @@
-🎯 QUIZ ADVENTURE
+<div align="center">
 
-An Interactive Quiz Game Using Core Java
+# 🎯 QUIZ ADVENTURE
 
-📌 About the Project
+### 🧠 An Interactive Quiz Game Built with Core Java
 
-Quiz Adventure is a Java-based interactive quiz game developed as a mini project to demonstrate the practical application of Java programming and Object-Oriented Programming (OOP) concepts.
+**Learn • Play • Challenge Yourself**
 
-The game allows a player to participate in a quiz by selecting a category and difficulty level, answering questions, and receiving a score based on their performance.
+<br>
 
-The project focuses on applying OOP concepts such as encapsulation, abstraction, inheritance, polymorphism, constructors, and method overriding in a simple and interactive application.
+![Java](https://img.shields.io/badge/Java-Core%20Java-orange?style=for-the-badge&logo=openjdk)
+![OOP](https://img.shields.io/badge/OOP-Object%20Oriented%20Programming-blue?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-In%20Development-yellow?style=for-the-badge)
 
-🎯 Objectives
-To develop an interactive quiz game using Core Java.
-To allow players to select quiz categories and difficulty levels.
-To display questions and evaluate submitted answers.
-To calculate and display the player's score.
-To apply Java and OOP concepts through a practical application.
-To develop a modular and easy-to-maintain Java application.
+</div>
 
+---
 
-🎮 Game Flow
-START
-  ↓
-PLAYER DETAILS
-  ↓
-SELECT CATEGORY / DIFFICULTY
-  ↓
-START QUIZ
-  ↓
-DISPLAY QUESTION
-  ↓
-SUBMIT ANSWER
-  ↓
-EVALUATE ANSWER
-  ↓
-UPDATE SCORE
-  ↓
-MORE QUESTIONS?
-  ↓
-FINAL RESULT
+## 🎮 About the Project
 
+**Quiz Adventure** is an interactive quiz game developed using **Core Java** as a mini project.
 
-✨ Key Features
-Player details entry
-Category selection
-Difficulty selection
-Multiple-choice questions
-True/False questions
-Answer evaluation
-Score calculation
-Sequential question display
-Final score and result
-Invalid input handling
+The project provides a simple and engaging quiz experience where players can answer questions, test their knowledge, and receive a final score.
 
-☕ Java & OOP Concepts Used
-Encapsulation
+More importantly, the project demonstrates how **Object-Oriented Programming concepts can be applied to a practical application** instead of keeping the entire program inside a single main method.
 
-Protects the internal data of classes and provides controlled access through methods.
+---
 
-Abstraction
+## ✨ What Can You Do?
 
-The Question class provides a common structure for different types of questions without exposing unnecessary implementation details.
+🎮 **Play a Quiz**  
+Answer a series of questions and test your knowledge.
 
-Inheritance
+📚 **Choose a Category**  
+Select the area of questions you want to attempt.
 
-MCQQuestion and TrueFalseQuestion inherit common properties and behaviour from the Question class.
+⚡ **Choose Difficulty**  
+Challenge yourself with different difficulty levels.
 
-Polymorphism
+📝 **Answer Questions**  
+Questions are presented sequentially and evaluated by the program.
 
-A common Question reference can represent different question types and invoke their respective implementations.
+🏆 **Track Your Score**  
+Your score is updated based on your answers.
 
-Method Overriding
+🎯 **View Your Result**  
+At the end of the quiz, your final performance is displayed.
 
-Different question classes provide their own implementation of methods such as displaying and checking answers.
+---
 
-Constructors
+## 🕹️ How It Works
 
-Used to initialize objects such as players and questions.
+```text
+                    🎮 START
+                       │
+                       ▼
+                👤 PLAYER DETAILS
+                       │
+                       ▼
+             📚 SELECT CATEGORY
+                       │
+                       ▼
+             ⚡ SELECT DIFFICULTY
+                       │
+                       ▼
+                 📝 START QUIZ
+                       │
+                       ▼
+              ❓ DISPLAY QUESTION
+                       │
+                       ▼
+                ✏️ SUBMIT ANSWER
+                       │
+                       ▼
+              🔍 EVALUATE ANSWER
+                       │
+                       ▼
+                  🏆 UPDATE SCORE
+                       │
+                       ▼
+              ❓ MORE QUESTIONS?
+                  /          \
+                YES           NO
+                 │             │
+                 └─────┐       ▼
+                       │   🏆 FINAL RESULT
+                       │
+                       └──► NEXT QUESTION
 
-this Keyword
-
-Used to refer to the current object when initializing or accessing instance members.
-
-Access Modifiers
-
-Used to control access to class members and protect data.
-
-Exception Handling
-
-Used to handle invalid input and prevent the application from terminating unexpectedly.
-
-🧩 Main Classes
-                    Question
-                 <<Abstract Class>>
-                         │
-             ┌───────────┴───────────┐
-             ↓                       ↓
-      MCQQuestion             TrueFalseQuestion
-             │                       │
-             └───────────┬───────────┘
-                         ↓
-                        Quiz
-                         │
-                    QuizManager
-                    /         \
-                   ↓           ↓
-                Player       Score
-
-Player
-
-Stores player information and maintains the player's score.
-
-Question
-
-Abstract class containing the common structure and behaviour of questions.
-
-MCQQuestion
-
-Represents multiple-choice questions.
-
-TrueFalseQuestion
-
-Represents True/False questions.
-
-Quiz
-
-Maintains and manages the collection of questions.
-
-QuizManager
-
-Controls the overall quiz session and game flow.
-
-Score
-
-Responsible for score-related operations.
-
-📂 Project Structure
-
+🏗️ Project Architecture
 QuizAdventure/
 │
-├── src/
-│   ├── main/
+├── 📁 src/
+│   │
+│   ├── 📁 main/
 │   │   └── Main.java
 │   │
-│   ├── player/
+│   ├── 📁 player/
 │   │   └── Player.java
 │   │
-│   ├── question/
+│   ├── 📁 question/
 │   │   ├── Question.java
 │   │   ├── MCQQuestion.java
 │   │   └── TrueFalseQuestion.java
 │   │
-│   ├── quiz/
+│   ├── 📁 quiz/
 │   │   ├── Quiz.java
 │   │   └── QuizManager.java
 │   │
-│   └── exception/
+│   └── 📁 exception/
 │       └── InvalidInputException.java
 │
 └── README.md
+🧠 Class Structure
+                     ┌─────────────────────┐
+                     │      Question       │
+                     │   <<abstract>>      │
+                     └──────────┬──────────┘
+                                │
+                  ┌─────────────┴─────────────┐
+                  │                           │
+                  ▼                           ▼
+        ┌──────────────────┐       ┌────────────────────┐
+        │   MCQQuestion    │       │ TrueFalseQuestion  │
+        └──────────────────┘       └────────────────────┘
+                  │                           │
+                  └─────────────┬─────────────┘
+                                │
+                                ▼
+                       ┌────────────────┐
+                       │      Quiz      │
+                       └───────┬────────┘
+                               │
+                               ▼
+                      ┌──────────────────┐
+                      │   QuizManager    │
+                      └───────┬──────────┘
+                              │
+                    ┌─────────┴─────────┐
+                    ▼                   ▼
+             ┌────────────┐      ┌────────────┐
+             │   Player   │      │   Score    │
+             └────────────┘      └────────────┘
+☕ Java Concepts Used
+Concept	Application
+Classes & Objects	Represent players, quizzes and questions
+Constructors	Initialize objects
+Strings	Store player and question information
+Arrays	Store MCQ options
+Collections	Manage multiple questions
+Methods	Implement individual operations
+Control Statements	Control quiz flow
+Access Modifiers	Control data accessibility
+Abstract Classes	Define common question behaviour
+Inheritance	Create specialized question classes
+Polymorphism	Handle different question types
+Method Overriding	Implement question-specific behaviour
+Exception Handling	Handle invalid input
+Packages	Organize related classes
+🛠️ Technologies
+<div align="center">
 
+Java • Core Java • OOP • Collections • Exception Handling
 
-🛠️ Technologies Used
-Programming Language: Java
-Programming Paradigm: Object-Oriented Programming
-Development: Core Java
-Data Structures: Arrays / Collections
-Exception Handling: Java Exception Handling
-📈 Expected Outcome
+</div>
+🚀 Getting Started
+1️⃣ Clone the repository
+git clone <your-repository-url>
+2️⃣ Navigate to the project
+cd QuizAdventure
+3️⃣ Compile
+javac -d out src/main/Main.java src/player/Player.java src/question/*.java src/quiz/*.java src/exception/*.java
+4️⃣ Run
+java -cp out main.Main
+📸 Project Preview
 
-The completed application will allow the player to:
+Screenshots of the running application will be added here after implementation.
 
-Enter player details.
-Select a quiz category and difficulty.
-Answer questions sequentially.
-Receive immediate answer evaluation.
-Track their score.
-View the final result.
-🚀 Future Scope
+┌──────────────────────────────────────┐
+│          🎯 QUIZ ADVENTURE           │
+├──────────────────────────────────────┤
+│                                      │
+│  Welcome, Player!                    │
+│                                      │
+│  Select your category:               │
+│                                      │
+│  [1] Java                            │
+│  [2] General Knowledge               │
+│  [3] Science                         │
+│                                      │
+│             [ START ]                │
+│                                      │
+└──────────────────────────────────────┘
+🌱 Future Scope
 
-The project can be extended with:
+The project can be further enhanced with:
 
-Graphical User Interface
-More quiz categories
-More difficulty levels
-Larger question banks
-Leaderboard
-Player score history
-Database-based question and score storage
-Timer-based quizzes
-
-👥 Team Members
+🖥️ Graphical User Interface
+📚 Larger question bank
+🎚️ Multiple difficulty levels
+🏆 Leaderboard
+💾 Persistent score history
+⏱️ Timed quizzes
+👤 Multiple player profiles
+🗄️ Database integration
+🎨 Improved visual design
+👥 Team
+Team Members
+Name
 DEVI CHANDRAN S
 DEVIKA NA
 DEVIKA VIJIKUMAR
 DEVU NANDITHA A S
+<div align="center">
+🎯 QUIZ ADVENTURE
+
+Think. Answer. Score. Repeat.
+
+Made with ☕ Java 
+
+</div> ```
