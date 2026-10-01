@@ -213,11 +213,7 @@ DEVI CHANDRAN S
 DEVIKA NA
 DEVIKA VIJIKUMAR
 DEVU NANDITHA A S
-<div align="center">
+
+
 🎯 QUIZ ADVENTURE
 
-Think. Answer. Score. Repeat.
-
-Made with ☕ Java 
-
-</div> ```
